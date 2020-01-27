@@ -1,4 +1,6 @@
 ## Welcome to GitHub Pages
+[![Netlify Status](https://api.netlify.com/api/v1/badges/abfd8536-377e-4fe8-9f8e-8c8575f07bc0/deploy-status)](https://app.netlify.com/sites/lunatiikxd/deploys)
+
 
 You can use the [editor on GitHub](https://github.com/LunatiikXD/lunatiikxd.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
