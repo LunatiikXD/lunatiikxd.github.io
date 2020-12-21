@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+   font-family: "Helvetica", sans-serif;
+  color: white;
+}
+	    
+		nav ul {
+    background-color: #212121;
+     border-style: solid;
+  border-color:  black;
+  border-width: 2px;
+  padding: 10px;
+  border-radius: 10px;
+}
+nav ul li {
+    list-style-type: none;
+}
+nav ul li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: PapayaWhip;
+        text-align: center;
+
+}
+nav ul li a {
+    text-decoration: none;
+      color: white;
+}
+
+.Logo {
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+  font-family: 'Roboto Mono', monospace;
+  padding-left: 35px;
+  display:block;
+  font-size: 35;
+  text-decoration: underline;
+}
+
+.Text {
+  text-shadow: 0 2px 4px rgba(0,0,0,.5);
+  font-family: 'C';
+  padding-left: 35px;
+  display:block;
+  font-size: 15;
+}
+
+.Code {
+    font-family: 'Inconsolata', monospace;
+    text-shadow: 0 0 0 0;
+    background-color: #0f0f0f;
+    display:inline-block;
+    font-size: 15;
+    padding: 2px;
+}
+
+.divide {
+	padding: 0; /* Pasted from Koutsie. Github: https://github.com/koutsie/suicidal.tech */
+	margin: 0;
+    width: 100%;
+    height: 100%;
+    animation: gradient 5s linear infinite;
+    animation-direction: alternate;
+    margin-bottom: 10px;
+    position: absolute;
+	height: 4px;
+	border-bottom: 0px solid #000;
+    background: linear-gradient(95deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+    background-size: 600% 50%;
+}
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
