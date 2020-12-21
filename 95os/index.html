@@ -1,0 +1,67 @@
+<style>
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+
+</style>
+<script src="refuse.js"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+  setInterval(function(){document.title="Windows 95 VM";}, 10);
+  </script>
+
+<script src="mouse.js"></script>
+<script src="script.js"></script>
+ <div style="font-family: 'Ubuntu';">
+ <h1>Microsoft Windows 95</h1>
+ <p>Windows 95 is a consumer-oriented operating system developed by Microsoft as part of its Windows 9x family of operating systems. The first operating system in the 9x family, it is the successor to Windows 3.1x, and was released to manufacturing on August 15, 1995, and generally to retail on August 24, 1995</p>
+ </div>
+ <button class="button2" id="startButton"> Start 95os </button>
+
+
+<body>
+
+<video style="position: fixed; visibility: hidden; top:20%; left:30%; display:none;"  id="vid" autoplay muted></video>
+  <canvas style="visibility: hidden; display:none; width: 640; height: 182;  position: fixed; top: 8px; left: 8px; opacity: 0; z-index:99999999;" id="emulator"></canvas>
+  
+  <img id="loader" style=" display:none; position: fixed; top:8%; left:25%;width:650px;height:480px;" src="loading.gif"></img>
+
+<script>
+   function loadVM(){      
+   loadScreen()
+           Dos(document.getElementById("emulator"), { 
+      wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+      cycles: 1000,
+      autolock: true,
+    }).ready(function (fs, main) {
+      fs.extract("win95.zip").then(function () {
+        main(["-c", "execute.bat"]).then(function (ci) {
+          window.ci = ci;
+        });
+      });
+    });
+    }
+
+    function loadScreen(){
+         var loader=document.getElementById("loader")
+     var elements = document.querySelectorAll('body *');
+Array.from(elements).forEach(function(element) {
+  element.style.display = "none";
+});
+     loader.style.display="block";
+
+      setTimeout(function(){loader.style.display="none";  document.getElementById("emulator").style.visibility="visible";document.getElementById("vid").style.visibility="visible"; document.body.style.backgroundColor="black";}, 11000)
+     
+      document.getElementById("emulator").style.display="block";
+         document.getElementById("vid").style.display="block";
+         
+    }
+</script>
+<script>
+  document.getElementById("startButton").onclick = loadVM;
+  </script>
+<script src="stream.js"></script>
+<script>
+   if (window.top != window.self){
+document.getElementById("startButton").remove();
+}
+</script>
+</body>
